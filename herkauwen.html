@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+    <title>Herkauwen - Podcast</title>
+     <link rel="stylesheet" href="herkauwen.css">
+</head>
+
+
+<body>
+
+    <div class="blur-overlay"></div>
+
+    <div id="countdown"></div>
+
+    <script>
+
+        function updateCountdown() {
+            var now = new Date();
+            var dayOfWeek = now.getDay();
+
+            if (dayOfWeek === 1) {
+                document.getElementById("countdown").innerHTML = "Er is een nieuwe aflevering te beluisteren!";
+            } else {
+
+                var daysUntilMonday = (8 - dayOfWeek) % 7;
+                var secondsUntilMonday = daysUntilMonday * 24 * 60 * 60 - now.getHours() * 60 * 60 - now.getMinutes() * 60 - now.getSeconds();
+                
+
+                var hours = Math.floor(secondsUntilMonday / 3600);
+                var minutes = Math.floor((secondsUntilMonday % 3600) / 60);
+                var seconds = secondsUntilMonday % 60;
+                document.getElementById("countdown").innerHTML = "Nieuwe Aflevering in: " + hours + "u " + minutes + "m " + seconds + "s";
+                
+
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+
+        updateCountdown();
+    </script>
+
+
+    <button class="menu-btn" onclick="toggleNav()">Menu</button>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="/herkauwen.html">Afleveringen</a>
+        <a href="/wie-zijn-wij.html">Wie zijn wij</a>
+        <a href="/links.html">Linkjes</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+
+    <script>
+ 
+    function toggleNav() {
+        var sideNav = document.getElementById("mySidenav");
+        var menuBtn = document.getElementById("menuBtn");
+        if (sideNav.style.width === "250px") {
+            sideNav.style.width = "0";
+            menuBtn.style.display = "block";
+        } else {
+            sideNav.style.width = "250px";
+            menuBtn.style.display = "none";
+        }
+    }
+</script>
+
+
+<body>
+<div class="episode-container">
+
+    <div class="episode">
+        <img src="/episodes/8.jpg" alt="Aflevering 8">
+        <h2>Aflevering 8: Interstellar</h2>
+        <p>
+
+</p>
+<h5>Release: 6 Mei 2024</h5>
+        <a href="https://open.spotify.com/episode/48nctr1xNGl03TSgVGi47P" target="_blank">Spotify</a>
+        <a href="https://youtu.be/V0eVzAD1ibE" target="_blank">Youtube</a>
+    </div>
+
+    <div class="episode">
+        <img src="/episodes/7.jpg" alt="Aflevering 7">
+        <h2>Aflevering 7: Mees Kees</h2>
+        <p>
+Mees Kees, de kinderfilm uit 2012, gebaseerd op de gelijknamige boeken van Mirjam Oldenhave, wordt besproken door Fabian, Niels, Ruben en Tim.
+De kinderacteurs worden besproken, maar ook wordt het vergeleken met de gelijknamige boeken. Is dit maar een simpele kinderfilm, die verbloemd wordt door nostalgie, of is dit toch een betere film dan de meeste mensen lijken te denken?
+
+</p>
+<h5>Release: 29 April 2024</h5>
+        <a href="https://open.spotify.com/episode/4th5tu53oDPI9ceBCq2YDI" target="_blank">Spotify</a>
+        <a href="https://youtu.be/He80UAChCT8" target="_blank">Youtube</a>
+    </div> 
+
+        <div class="episode">
+            <img src="/episodes/6.jpg" alt="Aflevering 6">
+            <h2>Aflevering 6: Star Wars A New Hope</h2>
+            <p>Star Wars, de futuristische wereld film uit 1977 wordt besproken door Ruben, Tim, Fabian en Niels. Van de geweldige muziek tot waar het zich af speelt in de star wars saga. Is de film wel echt zo goed als dat er gezegd wordt, of is het een saaie ouderwetse film.</p>
+            <h5>Release: 23 April 2024</h5>
+            <a href="https://open.spotify.com/episode/0nE3opwghg02MdsCjFKMSQ" target="_blank">Spotify</a>
+            <a href="https://youtu.be/LJTUlZhSgLU" target="_blank">Youtube</a>
+        </div>
+
+        <div class="episode">
+            <img src="/episodes/5.jpg" alt="Aflevering 5">
+            <h2>Aflevering 5: Oppenheimer</h2>
+            <p>De vakantie film van 2023. Oppenheimer bracht samen met Barbie een unieke een revolutionaire visie op de de wereld. Niels, Ruben, Fabian en Tim bespreken wat ze van de film vinden. Hoe ze hem gekeken hebbben, want is de film echt zo goed, of is insterstellar toch beter?</p>
+            <h5>Release: 15 April 2024</h5>
+            <a href="https://open.spotify.com/episode/5n7KeKv319liPBQE3mHEQ5" target="_blank">Spotify</a>
+            <a href="https://youtu.be/SpERbpkQu5A" target="_blank">Youtube</a>
+        </div>
+
+        <div class="episode">
+            <img src="/episodes/4.jpg" alt="Aflevering 4">
+            <h2>Aflevering 4: De Super Mario Bros Film</h2>
+            <p>Mario, iedereen kent het wel, maar is de film bekend. In deze aflevering bespreken Ruben, Tim, Niels en Fabian de Super Mario Bros film. Vinden ze dat er te veel muziek in zit, is het verhaal te onderduidelijk, klopt het wel met de orginele games?</p>
+            <h5>Release: 8 April 2024</h5>
+            <a href="https://open.spotify.com/episode/6wu4ntnpKIQktNvx2fHYG5" target="_blank">Spotify</a>
+            <a href="https://youtu.be/5sWT2RNWRPE" target="_blank">Youtube</a>
+        </div>
+
+        <div class="episode">
+            <img src="/episodes/3.jpg" alt="Aflevering 3">
+            <h2>Aflevering 3: Barbie</h2>
+            <p>In deze aflevering bespreken Ruben, Niels, Tim en Fabian de feministische thema's in Barbie, de kleurrijke zomerfilm van 2023. We analyseren de glinsterende magie van het verhaal en delen onze diverse meningen, variërend van haat naar liefde voor de blockbuster.
+                </p>
+                <h5>Release: 1 April 2024</h5>
+            <a href="https://open.spotify.com/episode/6CW9qbcgY15fLE1CR3BCHI" target="_blank">Spotify</a>
+            <a href="https://youtu.be/E1KM0An4PRs" target="_blank">Youtube</a>
+        </div>
+
+        <div class="episode">
+            <img src="/episodes/2.jpg" alt="Aflevering 2">
+            <h2>Aflevering 2: Avatar The Last Airbender</h2>
+            <p>In de tweede aflevering van hun podcast bespreken Tim, Ruben, Niels en Fabian uitvoerig de geliefde televisieserie "Avatar: The Last Airbender". Ze delen hun gedachten over de recente live-action remake en analyseren het nauwlettend.</p>
+            <h5>Release: 25 Maart 2024</h5>
+            <a href="https://open.spotify.com/episode/6uSTcCnOUypkq17gB8UZ7z" target="_blank">Spotify</a>
+            <a href="https://youtu.be/iwBpp0NeIMk" target="_blank">Youtube</a>
+        </div>
+            <div class="episode">
+            <img src="/episodes/1.jpg" alt="Aflevering 1">
+            <h2>Aflevering 1: Wie is de Mol?</h2>
+            <p>In de debuutaflevering van de podcast bespreken Tim, Ruben, Niels en Fabian het populaire programma "Wie is de Mol?" Ze evalueren of ze de Mol correct hebben geraden, onderzoeken of het nog steeds boeiend is om naar te kijken, en verkennen andere fascinerende aspecten van het spel.</p>
+            <h5>Release: 18 Maart 2024</h5>
+            <a href="https://open.spotify.com/episode/48nctr1xNGl03TSgVGi47P" target="_blank">Spotify</a>
+            <a href="https://youtu.be/V0eVzAD1ibE" target="_blank">Youtube</a>
+        </div>
+    </div>
+
+    <script src="review.html"></script>
+    <script>
+        function goToPage() {
+            window.open('https://open.spotify.com/show/1WJnUHXzRTU5brMgtzZAo2');
+        }
+    </script>
+</body>
+</html>

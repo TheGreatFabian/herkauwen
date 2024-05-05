@@ -1,0 +1,174 @@
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/banners/banner.jpg');
+    filter: blur(7px);
+    z-index: -1;
+}
+   
+
+        .episode-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .episode {
+            background-color: #c5d4e4 !important;
+            border: 1px solid #515ff6;
+            padding: 15px; 
+            margin: 0 10px 18px 10px;
+            transition: transform 0.4s ease;
+            border-radius: 14px;
+            position: relative;
+            width: calc(50% - 22px);
+            box-sizing: border-box; 
+            background-color: #c5d4e4;
+            font-size: 14px;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .episode:nth-child(odd) {
+            float: left;
+            clear: left;
+        }
+
+        .episode:nth-child(even) {
+            float: right;
+            clear: right;
+        }
+
+        .episode:hover {
+            transform: scale(1.05);
+        }
+
+        .episode img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .episode:hover img {
+            transform: scale(1.05);
+        }
+
+        .episode h2,
+        .episode p {
+            max-width: calc(100% - 120px);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .episode {
+                width: 100%;
+            }
+        }
+
+        .btn-container {
+            position: fixed;
+            top: 15px;
+            right: 8px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #437fbf;
+        }
+        
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #000000;
+    opacity: 80%;
+    overflow-x: hidden;
+    transition: 0.25s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            z-index: 2;
+            top: 10px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .countdown {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.episode h2 {
+    font-family: Arial, sans-serif;
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+#countdown {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }

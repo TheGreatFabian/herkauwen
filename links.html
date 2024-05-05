@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+    <title>Linkjes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #555;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .social-links a:last-child {
+            margin-right: 0;
+        }
+        .podcast-info {
+            text-align: center;
+            margin-top: 40px
+        }
+        .podcast-info img {
+            max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #437fbf;
+        }
+        
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #000000;
+    opacity: 80%;
+    overflow-x: hidden;
+    transition: 0.25s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            z-index: 2;
+            top: 10px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <button class="menu-btn" onclick="toggleNav()">Menu</button>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="/herkauwen.html">Afleveringen</a>
+        <a href="/wie-zijn-wij.html">Wie zijn wij</a>
+        <a href="/links.html">Linkjes</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+
+    <script>
+ 
+    function toggleNav() {
+        var sideNav = document.getElementById("mySidenav");
+        var menuBtn = document.getElementById("menuBtn");
+        if (sideNav.style.width === "250px") {
+            sideNav.style.width = "0";
+            menuBtn.style.display = "block";
+        } else {
+            sideNav.style.width = "250px";
+            menuBtn.style.display = "none";
+        }
+    }
+
+    </script>
+
+<body>
+    <div class="container">
+        <h1>Wow wat vet, je wilt ons luisteren...</h1>
+        <p>Je kunt ons luisteren bekijken op je favoriete Podcast App!</p>
+
+        <div class="social-links">
+            <a href="https://www.youtube.com/@herkauwen" target="_blank">YouTube</a>
+            <a href="https://open.spotify.com/show/1WJnUHXzRTU5brMgtzZAo2" target="_blank">Spotify</a>
+            <a href="https://podcasts.apple.com/nl/podcast/herkauwen/id1742177131" target="_blank">Apple Podcasts</a>
+        </div>
+
+        <div class="podcast-info">
+            <img src="/Foto/Icon_herkauwen.jpg" alt="Podcast Afbeelding">
+            <h2>Over Onze Podcast</h2>
+            <p>Fabian, Tim, Ruben en Niels bespreken elke week een nieuwe film, serie of opvallende momenten uit de mediawereld!
+                Elke maandag weer een nieuwe aflevering.</p>
+        </div>
+    </div>
+</body>
+</html>

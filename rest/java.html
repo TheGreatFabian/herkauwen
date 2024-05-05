@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoring System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Scoring System</h1>
+    <form id="scoreForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="episode">Episode:</label>
+        <input type="text" id="episode" name="episode" required>
+        
+        <label for="score">Score:</label>
+        <input type="number" id="score" name="score" min="0" max="100" required>
+        
+        <button type="submit">Submit Score</button>
+    </form>
+
+    <h2>Submitted Scores</h2>
+    <ul id="scoreList"></ul>
+
+    <script>
+        var scores = []; // Array to store submitted scores
+
+        // Function to handle form submission
+        document.getElementById('scoreForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            var username = document.getElementById('username').value;
+            var episode = document.getElementById('episode').value;
+            var score = document.getElementById('score').value;
+
+            // Call function to save score
+            saveScore(username, episode, score);
+        });
+
+        // Function to save score
+        function saveScore(username, episode, score) {
+            // Create object to store score details
+            var scoreObj = { username: username, episode: episode, score: score };
+
+            // Add score object to scores array
+            scores.push(scoreObj);
+
+            // Update display
+            displayScores();
+        }
+
+        // Function to display submitted scores
+        function displayScores() {
+            var scoreList = document.getElementById('scoreList');
+            scoreList.innerHTML = ''; // Clear existing list
+
+            // Loop through scores array and create list items
+            scores.forEach(function(scoreObj) {
+                var listItem = document.createElement('li');
+                listItem.textContent = "User: " + scoreObj.username + ", Episode: " + scoreObj.episode + ", Score: " + scoreObj.score;
+                scoreList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

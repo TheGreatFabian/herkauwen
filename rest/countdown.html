@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+    <title>Countdown Test</title>
+
+    <style>
+        #countdown {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="countdown"></div>
+
+    <script>
+
+        function updateCountdown() {
+            var now = new Date();
+            var dayOfWeek = now.getDay();
+
+            if (dayOfWeek === 1) {
+                document.getElementById("countdown").innerHTML = "Er is een nieuwe aflevering te beluisteren!";
+            } else {
+
+                var daysUntilMonday = (8 - dayOfWeek) % 7;
+                var secondsUntilMonday = daysUntilMonday * 24 * 60 * 60 - now.getHours() * 60 * 60 - now.getMinutes() * 60 - now.getSeconds();
+                
+
+                var hours = Math.floor(secondsUntilMonday / 3600);
+                var minutes = Math.floor((secondsUntilMonday % 3600) / 60);
+                var seconds = secondsUntilMonday % 60;
+                document.getElementById("countdown").innerHTML = "Nieuwe Aflevering in: " + hours + "u " + minutes + "m " + seconds + "s";
+                
+
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+
+        updateCountdown();
+    </script>
+</body>
+</html>

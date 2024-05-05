@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+<title>Wie zijn wij</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .person {
+        width: 200px;
+        margin-bottom: 40px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .person:hover {
+        transform: translateY(-10px);
+    }
+
+    .person img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        border: 5px solid #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .person h2 {
+        margin: 0;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .person p {
+        margin: 10px 0;
+        color: #666;
+    }
+
+    .btn-container {
+            position: fixed;
+            top: 15px;
+            right: 8px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #437fbf;
+        }
+        
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #000000;
+    opacity: 80%;
+    overflow-x: hidden;
+    transition: 0.25s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            z-index: 2;
+            top: 10px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #0056b3;
+        }
+
+</style>
+</head>
+
+<body>
+
+    <button class="menu-btn" onclick="toggleNav()">Menu</button>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="/herkauwen.html">Afleveringen</a>
+        <a href="/wie-zijn-wij.html">Wie zijn wij</a>
+        <a href="/links.html">Linkjes</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+
+    <script>
+ 
+    function toggleNav() {
+        var sideNav = document.getElementById("mySidenav");
+        var menuBtn = document.getElementById("menuBtn");
+        if (sideNav.style.width === "250px") {
+            sideNav.style.width = "0";
+            menuBtn.style.display = "block";
+        } else {
+            sideNav.style.width = "250px";
+            menuBtn.style.display = "none";
+        }
+    }
+
+    </script>
+
+<body>
+
+<div class="container">
+    <div class="person">
+        <img src="/personen/Fabian.png" alt="Person 1">
+        <h2>Fabian</h2>
+        <p>Met liefde voor Star wars en Marvel neemt hij deel uit van de podcast. Met zijn kennis over onnodige feitjes probeert hij elke aflevering wat op te vrolijken.</p>
+</div>
+    <div class="person">
+        <img src="/personen/Ruben.png" alt="Person 2">
+        <h2>Ruben</h2>
+        <p>Ruben probeert elke week gezelligheid in te brengen door grappige </p>
+    </div>
+    <div class="person">
+        <img src="/personen/Tim.png" alt="Person 3">
+        <h2>Tim</h2>
+        <p>Nog een marvel fan kan wel in de groep. Tim heeft elke week wel een recommendation.</p>
+    </div>
+    <div class="person">
+        <img src="/personen/Niels.png" alt="Person 4">
+        <h2>Niels</h2>
+        <p>Niels probeert elke week</p>
+    </div>
+</div>
+
+</body>
+</html>

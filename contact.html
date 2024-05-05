@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 120px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #004ea1;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .social-links a:last-child {
+            margin-right: 0;
+        }
+
+
+        .btn-container {
+            position: fixed;
+            top: 15px;
+            right: 8px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #437fbf;
+        }
+        
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #000000;
+    opacity: 80%;
+    overflow-x: hidden;
+    transition: 0.25s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            z-index: 2;
+            top: 10px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<button class="menu-btn" onclick="toggleNav()">Menu</button>
+
+<div id="mySidenav" class="sidenav">
+    <a href="/herkauwen.html">Afleveringen</a>
+    <a href="/wie-zijn-wij.html">Wie zijn wij</a>
+    <a href="/links.html">Linkjes</a>
+    <a href="/contact.html">Contact</a>
+</div>
+
+<script>
+
+function toggleNav() {
+    var sideNav = document.getElementById("mySidenav");
+    var menuBtn = document.getElementById("menuBtn");
+    if (sideNav.style.width === "250px") {
+        sideNav.style.width = "0";
+        menuBtn.style.display = "block";
+    } else {
+        sideNav.style.width = "250px";
+        menuBtn.style.display = "none";
+    }
+}
+</script>
+
+<body>
+    <div class="container">
+        <h1>Stuur ons maar een Mailtje!</h1>
+        <form action="mailto:herkauwen@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required placeholder="Uw naam">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="herkauwen@gmail.com">
+            
+            <label for="message">Bericht:</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Uw bericht naar ons"></textarea>
+            
+            <input type="submit" value="Stuur bericht">
+        </form>
+        <div class="social-links">
+            <p>Of neem contact met ons op via</p>
+            <a href="https://www.instagram.com/herkauwen" target="_blank">Instagram</a>
+        </div>
+    </div>
+</body>
+</html>

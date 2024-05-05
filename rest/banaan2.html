@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Idk wat ik hier wil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - Fabian's Website</title>
+    <link rel="icon" href="/foto/icoon.jpg" type="image/x-icon">
+</head>
+<body style="background-color: rgba(95, 95, 223, 0.564);">
+    <!--Dit is de eerste pagina-->
+    <h1 style="color: bisque;">Wat een coole website</h1> 
+    <hr>
+    <p>Dit is het begin van jouw avontuur</p>
+
+<ul>
+    <b>Benodigdheden</b>
+    <li>Laptop</li>
+    <li>SD kaart</li>
+    <li>Kaart reader</li>
+    <li>Muis (aangeraden)</li>
+</ul>
+ 
+<ol>
+    <b>Hoe speel je?</b>
+    <li>open de app</li>
+    <li>Klik op deze <a href="page4.html" target="_blank" title="Speel het spel">
+        link
+            </a></li>
+    <li>Volg de instructies</li>
+</ol>
+
+<dl>
+    <dt>Speel mee</dt>
+    <dd>Dit legt het spel uit</dd>
+    <dt>WIDM</dt>
+    <dd>Dit betekent Wie Is De Mol</dd>
+</dl>
+
+<button onclick="doSomething()" style="background-color: bisque; color: darkgreen; border-radius: 5px;">Click me</button>
+<p id="test">Halloooo</p>
+
+<script>
+    function doSomething(){
+        document.getElementById("test").innerHTML = "Goodbye";
+    }
+</script>
+
+<form method="GET">
+<div>
+    <label for="gnaam">Groep naam:</label>
+    <input type="text" id="gname" name="gname" placeholder="Wat wordt jouw Team naam?">
+</div>
+
+<br>
+
+<div>
+    <input type="reset"> <input type="submit">
+</div>
+
+</form>
+
+</body>
+
+<body>
+    <p><a href="page2.html" target="_blank" title="join onze leuke server">
+Pagina 2
+    </a> </p>
+    <p> </p><a href="page3.html" target="_blank" title="join onze leuke server">
+Pagina 3
+            </a> </p>
+
+<video controls height="500">
+    <source src="videoWV.mp4">
+    </video>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+    <title>Herkauwen - Podcast</title>
+    <style>
+        /* Add your CSS styles here */
+        .episode-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .episode {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0 10px 20px 10px;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        .episode:nth-child(odd) {
+            float: left;
+            clear: left;
+        }
+
+        .episode:nth-child(even) {
+            float: right;
+            clear: right;
+        }
+
+        .episode:hover {
+            transform: scale(1.05);
+        }
+
+        .episode img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .episode:hover img {
+            transform: scale(1.2);
+        }
+
+        .episode h2,
+        .episode p {
+            max-width: calc(100% - 120px);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .episode {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>

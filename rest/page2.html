@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/foto/Icon_herkauwen.jpg" type="image/x-icon">
+    <title>Herkauwen - Podcast</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #f0f0f0; /* Set a cool background color for the whole page */
+            font-family: Arial, sans-serif; /* Use a common font for better readability */
+        }
+
+        .episode-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .episode {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0 10px 20px 10px;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            background-color: #fff; /* Set background color for each episode */
+        }
+
+        .episode:nth-child(odd) {
+            float: left;
+            clear: left;
+        }
+
+        .episode:nth-child(even) {
+            float: right;
+            clear: right;
+        }
+
+        .episode:hover {
+            transform: scale(1.05);
+        }
+
+        .episode img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .episode:hover img {
+            transform: scale(1.2);
+        }
+
+        .episode h2,
+        .episode p {
+            max-width: calc(100% - 120px);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .episode {
+                width: 100%;
+            }
+        }
+
+        /* Button styles */
+        .btn-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Button to go to a different page -->
+    <div class="btn-container">
+        <button class="btn" onclick="goToPage()">Beluister op Spotify</button>
+    </div>
+    
+    <!-- List of podcast episodes -->
+    <div class="episode-container">
+        <div class="episode" style="background-color: #e3f2fd;"> <!-- Set a background color for the episode -->
+            <img src="/episodes/1.jpg" alt="Episode 1 Image">
+            <h2>Aflevering 1: Wie is de Mol?</h2>
+            <p>In de eerste aflevering bespreken Tim, Ruben, Niels en Fabian het programma Wie is de Mol. Hadden ze de mol goed, is het nog leuk om te kijken en nog veel meer!</p>
+            <p>Score: 10/10</p>
+            <a href="https://open.spotify.com/episode/48nctr1xNGl03TSgVGi47P">Spotify</a>
+            <a href="episode1_link2.html">Youtube</a>
+        </div>
+
+        <div class="episode" style="background-color: #e3f2fd;"> <!-- Set a background color for the episode -->
+            <img src="/episodes/2.jpg" alt="Episode 2 Image">
+            <h2>Aflevering 2: Avatar The Last Airbender</h2>
+            <p>In de tweede aflevering bespreken Tim, Ruben, Niels en Fabian de televisie serie "Avatar the last Airbender." Ook bespreken ze wat ze van de life action remake vinden. </p>
+            <p>Score: 10/10</p>
+            <a href="https://open.spotify.com/episode/6uSTcCnOUypkq17gB8UZ7z">Spotify</a>
+            <a href="episode2_link2.html">Youtube</a>
+        </div>
+        
+        <!-- Add more episodes with background colors as needed -->
+
+        <!-- JavaScript can be added here for interactivity if needed -->
+    </div>
+
+    <script src="review.html"></script>
+    <script>
+        // Function to go to a different page when the button is clicked
+        function goToPage() {
+            window.open('https://open.spotify.com/show/1WJnUHXzRTU5brMgtzZAo2');
+        }
+
+        // Get the container to add episodes (same as before)
+        // Generate episode elements and append them to the container (same as before)
+    </script>
+</body>
+</html>
